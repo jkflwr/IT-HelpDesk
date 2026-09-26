@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Welcome, {{ username }}</h1>
+
+    <div class="card2">
+        <nav>
+            <ul>
+                <button id="logout" type="button" onclick="window.location.href='/logout'">Log Out</button>
+            </ul>
+        </nav>
+
+
+        <button id="tickets" onclick="window.location.href='/ticket'">Create Ticket</button>
+        <button id="tickets" onclick="window.location.href='/tickets'">View Tickets</button> 
+        {% if session["role"] == "support" %}
+
+            <button id="tickets" onclick="window.location.href='/support/tickets'">
+                View All Tickets
+            </button>
+
+        {% endif %}
+    </div>
+
+</html>

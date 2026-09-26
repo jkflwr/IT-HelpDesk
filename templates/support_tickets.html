@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Support Tickets</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="card3">
+    <h1>Support Tickets</h1>
+
+    <input id="back" type="button" value="Back to Dashboard" onclick="window.location.href='/dashboard'">
+    <table>
+
+        <tr>
+
+            <th>Ticket ID</th>
+            <th>User</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+
+        </tr>
+
+        {% for ticket in tickets %}
+
+        <tr>
+
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.username }}</td>
+            <td>{{ ticket.title }}</td>
+            <td>{{ ticket.description }}</td>
+
+            <td>
+
+                <form method="POST" id="status-form" action="/update_status">
+
+                    <input type="hidden" name="ticket_id" value="{{ ticket.id }}">
+                    <select name="status" id="progress-update">
+                        <option value="Open" {% if ticket.status == "Open" %}selected{% endif %}>
+                            Open
+                        </option>
+                        <option value="In Progress" {% if ticket.status == "In Progress" %}selected{% endif %}>
+                            In Progress
+                        </option>
+                        <option value="Resolved" {% if ticket.status == "Resolved" %}selected{% endif %}>
+                            Resolved
+                        </option>
+                        <option value="Closed" {% if ticket.status == "Closed" %}selected{% endif %}>
+                            Closed
+                        </option>
+                    </select>
+
+                    <input type="submit" id="submit-status" value="Update">
+
+                </form>
+                <form method="POST" action="/send_message">
+
+                    <input type="hidden" name="ticket_id" value="{{ ticket.id }}">
+                    <textarea id="description"name="message" required></textarea>
+                    <input type="submit" id="send-message"value="Send Message">
+
+                </form>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+    </div>
+</body>
+
+</html>

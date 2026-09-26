@@ -1,0 +1,234 @@
+@font-face {
+  font-family: clemente;
+  src: url(clemente.ttf) format("truetype");
+}
+@font-face {
+  font-family: saeada;
+  src: url(LTSaeada-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: jua;
+  src: url(Jua-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: fredoka;
+  src: url(Fredoka.ttf) format("truetype");
+}
+@font-face {
+  font-family: poppins;
+  src: url(Poppins-Regular.ttf) format("truetype");
+}
+
+body{
+    font-family: poppins, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+    text-align: center;
+    margin-top: 200px;
+    background-color: #edecec;
+}
+
+h1 {
+    font-family: poppins, Arial, sans-serif;
+    font-size: 36px;
+}
+
+button{
+    font-family: poppins, Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #d55aaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 95%;
+
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tickets{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #5ad5cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit{
+    font-family: poppins, Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #d55aaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#msg{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+form {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+#status-form {
+    display: block;
+    text-align: left;
+}
+
+#username, #email, #password {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#logout{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #d55aaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#back{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4bceee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: fixed;
+    top: 10px;
+    left: 10px; 
+}
+
+#description, #title{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 5px;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+}
+
+#username-label {
+    font-weight: bold;
+    display: block;
+}
+#email-label {
+    font-weight: bold;
+    display: block;
+}
+#password-label {
+    font-weight: bold;
+    display: block;
+}
+
+#ticket-desc {
+    font-weight: bold;
+    display: block;
+}
+
+#send-message{
+    font-family: poppins, Arial, sans-serif;
+    font-size: 15px;
+    padding: 7px 13px;
+    background-color: #d55aaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#submit-status{
+    font-family: poppins, Arial, sans-serif;
+    font-size: 15px;
+    padding: 7px 13px;
+    background-color: #5ad5ae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#progress-update{
+    font-family: poppins, Arial, sans-serif;
+    font-size: 15px;
+    padding: 7px 13px;
+    background-color: #e0e5e4;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+}
+.card2{
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+}
+.card3{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 1px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+}
